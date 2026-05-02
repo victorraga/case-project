@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+dist/
+
+# Environment and Configuration
+.env
+.env.local
+
+# Sensitive cryptographic material - NEVER commit these
+# This includes SSL certificates, private keys, and keystores
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+*.pfx
+*.jks
+
+# Database files (contains user data)
+contacts.db
+*.db
+
+# Build and Test outputs
+*.log
+logs/
+dist/
+coverage/
+
+# IDE and OS
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Test artifacts
+test-contacts.db
+.nyc_output/

@@ -1,0 +1,46 @@
+{
+  "name": "case-project",
+  "version": "1.0.0",
+  "description": "Minimal contacts-book app with CRUD operations, SQLite, Express, and HTTPS",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "setup": "node setup.js",
+    "postinstall": "npm run setup",
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage",
+    "generate-cert": "openssl req -x509 -newkey rsa:4096 -nodes -out server.pem -keyout server.pem -days 365 -subj '/CN=localhost'",
+    "clean": "rm -f test-contacts.db contacts.db server.pem",
+    "db:reset": "npm run clean && npm run generate-cert"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorraga/case-project.git"
+  },
+  "keywords": ["contacts", "rest-api", "express", "sqlite", "https"],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/victorraga/case-project/issues"
+  },
+  "homepage": "https://github.com/victorraga/case-project#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "sqlite3": "^6.0.1"
+  },
+  "devDependencies": {
+    "@vitest/ui": "^4.1.5",
+    "supertest": "^7.2.2",
+    "vitest": "^4.1.5"
+  }
+}

@@ -1,0 +1,7 @@
+# Trivy ignore configuration
+# The server.pem file in the working directory is a development certificate
+# and is not committed to version control (.gitignore).
+# This is automatically regenerated and never persisted in git.
+# For production, use certificates from a trusted Certificate Authority.
+
+server.pem

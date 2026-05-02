@@ -1,0 +1,13 @@
+tests/
+test-contacts.db
+vitest.config.js
+.gitignore
+.dockerignore
+.env.example
+README.md
+docker-compose.yml
+Dockerfile
+.git/
+coverage/
+.vscode/
+.idea/
